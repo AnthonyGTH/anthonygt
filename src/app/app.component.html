@@ -1,0 +1,61 @@
+<div class="navbar-replacer"></div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/self-pictures/me.png" class="self-picture-navbar" alt="..."> Anthony Gabriel Torres
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+<div class="container">
+  <footer class="row border-top text-white">
+    <div class="col-md-5 col-padding">
+      <h5>Contact</h5>
+      <ul class="nav flex-column">
+
+        <li class="nav-item mb-2">EMAIL: <span class="text-muted">antogua21@gmail.com</span></li>
+        <li class="nav-item mb-2">TELEPHONE: <span class="text-muted">(+52) 341-438-5679</span></li>
+        <li class="nav-item mb-2">GITHUB: <a target="_blank" class="text-muted" href="https://www.github.com/AnthonyGTH">www.github.com/AnthonyGTH</a></li>
+        <li class="nav-item mb-2">LINKEDIN: <a target="_blank" class="text-muted" href="https://www.linkedin.com/in/anthonygth">www.linkedin.com/in/anthonygth</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4 col-padding">
+      <h5>Sections</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a routerLink="/home" class="nav-link p-0 text-muted">Home</a></li>
+        <li class="nav-item mb-2"><a routerLink="/work-experience" class="nav-link p-0 text-muted">Work experience</a></li>
+        <li class="nav-item mb-2"><a routerLink="/studies" class="nav-link p-0 text-muted">Studies</a></li>
+        <li class="nav-item mb-2"><a routerLink="/personal-information" class="nav-link p-0 text-muted">Personal information</a></li>
+        <li class="nav-item mb-2"><a routerLink="/interesting-things" class="nav-link p-0 text-muted">Interesting things</a></li>
+      </ul>
+    </div>
+    <div class="col-md-2 col-padding">
+      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+      </a>
+      <p class="text-muted">@AnthonyGTH</p>
+    </div>
+
+
+  </footer>
+</div>
