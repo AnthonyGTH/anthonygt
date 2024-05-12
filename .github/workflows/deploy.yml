@@ -29,6 +29,9 @@ jobs:
     - name: Build Angular project
       run: npm run build
 
+    - name: Print folders and files
+      run: ls -l
+
     - name: Deploy to server
       uses: appleboy/ssh-action@master
       with:
@@ -37,7 +40,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 65002
         script: |
-          cd /domains/anthonygt.website/public_html
+          cd ./domains/anthonygt.website/public_html/
           scp -r ./dist/* .
 
     - name: Clean up
