@@ -31,6 +31,3 @@ jobs:
           rm -rf dist
 
 
-    - name: Clean up
-      run: rm -rf dist
-
