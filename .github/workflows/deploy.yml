@@ -9,28 +9,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Print Secrets
-      run: |
-        echo "Server Host Length: ${#SERVER_HOST}"
-        echo "Server Username Length: ${#SERVER_USERNAME}"
-        echo "Password Length: ${#PASSWORD}"
-
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build Angular project
-      run: npm run build
-
-    - name: Print folders and files
-      run: ls -l
 
     - name: Deploy to server
       uses: appleboy/ssh-action@master
@@ -42,6 +20,11 @@ jobs:
         script: |
           cd domains/anthonygt.website/anthonygt
           git pull
+          wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.39.0/install.sh | bash
+          source ~/.profile
+          nvm ls-remote
+          nvm install 16.17.0
+          node -v
           yes no | npm run build
           cp -rf dist/anthonygth/* ../public_html/
           rm -rf dist
