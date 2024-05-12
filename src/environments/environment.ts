@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  version: require('../../package.json').version,
+  angularCli: require('../../package.json').devDependencies['@angular/cli'],
+  typescript: require('../../package.json').devDependencies['typescript'],
 };
 
 /*
