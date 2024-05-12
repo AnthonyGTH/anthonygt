@@ -40,8 +40,12 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: 65002
         script: |
-          cd ./domains/anthonygt.website/public_html/
-          scp -r dist/* .
+          cd domains/anthonygt.website/anthonygt
+          git pull
+          yes no | npm run build
+          cp -rf dist/anthonygth/* ../public_html/
+          rm -rf dist
+
 
     - name: Clean up
       run: rm -rf dist
