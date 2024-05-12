@@ -8,8 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
+    - name: Print Secrets
+      run: |
+        echo "Server Host: ${{ secrets.SERVER_HOST }}"
+        echo "Server Username: ${{ secrets.SERVER_USERNAME }}"
+        echo "Password: ${{ secrets.PASSWORD }}"
+        
     - name: Checkout code
       uses: actions/checkout@v2
 
