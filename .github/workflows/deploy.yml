@@ -26,6 +26,7 @@ jobs:
           nvm install 16.17.0
           node -v
           yes no | npm run build
+          rm -r ../public_html/*
           cp -rf dist/anthonygth/* ../public_html/
           rm -rf dist
 
