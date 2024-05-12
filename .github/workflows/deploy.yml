@@ -11,10 +11,10 @@ jobs:
     steps:
     - name: Print Secrets
       run: |
-        echo "Server Host: ${{ secrets.SERVER_HOST }}"
-        echo "Server Username: ${{ secrets.SERVER_USERNAME }}"
-        echo "Password: ${{ secrets.PASSWORD }}"
-        
+        echo "Server Host Length: ${#SERVER_HOST}"
+        echo "Server Username Length: ${#SERVER_USERNAME}"
+        echo "Password Length: ${#PASSWORD}"
+
     - name: Checkout code
       uses: actions/checkout@v2
 
