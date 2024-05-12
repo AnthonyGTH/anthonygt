@@ -19,8 +19,8 @@ jobs:
         port: 65002
         script: |
           cd domains/anthonygt.website/anthonygt
-          git switch development
-          git pull
+          git fetch origin
+          git reset --hard origin/development
           wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.39.0/install.sh | bash
           source ~/.profile
           nvm ls-remote
